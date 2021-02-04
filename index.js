@@ -15,8 +15,8 @@ const input=document.getElementById("city_input");
             title.innerText=data.name;
             status.innerText=data.weather[0].description
         
-            console.log(status.innerText);
-const iconUrl=`http://openweathermap.org/img/w/${data.weather[0].icon}.png`
+         console.log(status.innerText);
+     const iconUrl=`http://openweathermap.org/img/w/${data.weather[0].icon}.png`
      icon.setAttribute('src', iconUrl);
             temp.innerText = Math.round(data.main.temp)
         
