@@ -7,7 +7,7 @@ const input=document.getElementById("city_input");
 
  const fetchApi=()=>{
 
-        const weatheUrl=`http://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=1a7354c7c009f8dfb1d607d297e4f7ca` 
+        const weatheUrl=`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=1a7354c7c009f8dfb1d607d297e4f7ca` 
         fetch(weatheUrl)
         .then(response => response.json())
         .then(data=>{
@@ -17,7 +17,7 @@ const input=document.getElementById("city_input");
         
          console.log(status.innerText);
      const iconUrl=`http://openweathermap.org/img/w/${data.weather[0].icon}.png`
-     icon.setAttribute('src', iconUrl);
+         icon.setAttribute('src', iconUrl);
             temp.innerText = Math.round(data.main.temp)
         
         }) 
@@ -26,7 +26,7 @@ const input=document.getElementById("city_input");
    
 
 search.addEventListener('click', (e)=>{
-  e.preventDefault()   
+ 
 
  fetchApi();
 
